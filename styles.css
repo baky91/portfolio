@@ -116,6 +116,10 @@ nav h4 {
   color: var(--blue-accent);
 }
 
+.nav-links li a:active {
+  color: var(--blue-light);
+}
+
 /* ========== BACKGROUND IMAGE ========== */
 
 .background {
@@ -306,11 +310,11 @@ nav h4 {
   transform: scale(1.1);
 }
 
-.social-links a:hover {
+a:hover {
   color: var(--blue-accent);
 }
 
-.social-links a:active {
+a:active {
   color: var(--blue-light);
 }
 
