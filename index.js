@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // chargement des projets
+document.addEventListener("DOMContentLoaded", function () {
+  // Chargement des projets
   const projectsDatas = [
     {
       title: "Application SNCF",
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const projectsContainer = document.getElementById("projects-grid");
-  projectsDatas.forEach((project) => {
+  projectsDatas.forEach(function (project) {
     projectsContainer.innerHTML += `
             <div class="project-card">
                 <div class="project-image">
@@ -59,5 +59,40 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </div>
         `;
+  });
+
+  // Gestion de la navbar, sidebar
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  const overlay = document.querySelector(".overlay");
+
+  navToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("show");
+    overlay.classList.toggle("show");
+
+    // Change l'icône du bouton
+    if (navLinks.classList.contains("show")) {
+      this.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+              <path d="m249.85-207.85-42.15-42.15L457.85-480 207.7-730.15l42.15-42.15L500-522.15l250.15-250.14 42.15 42.15L542.15-480l250.15 250.15-42.15 42.15L500-437.85 249.85-207.85Z"/>
+          </svg>
+      `;
+    } else {
+      this.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+              <path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"/>
+          </svg>
+      `;
+    }
+  });
+
+  overlay.addEventListener("click", function () {
+    navLinks.classList.remove("show");
+    this.classList.remove("show");
+    navToggle.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+            <path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"/>
+        </svg>
+    `;
   });
 });

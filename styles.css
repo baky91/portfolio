@@ -57,7 +57,6 @@ img {
 }
 
 /* ========== NAVIGATION ========== */
-
 nav {
   background-color: #222;
   display: flex;
@@ -68,6 +67,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  height: 60px;
 }
 
 nav h4 {
@@ -79,13 +79,13 @@ nav h4 {
 
 .nav-toggle {
   display: none;
-  font-size: 1.8rem;
   background: none;
   color: white;
   border: none;
   cursor: pointer;
   position: absolute;
   right: 20px;
+  z-index: 101;
 }
 
 .nav-links {
@@ -93,7 +93,7 @@ nav h4 {
   display: flex;
   margin: 0;
   padding: 0;
-  height: 60px;
+  height: 100%;
 }
 
 .nav-links li {
@@ -108,7 +108,6 @@ nav h4 {
   color: white;
   font-size: 1.15rem;
   text-decoration: none;
-  transition: background 0.2s;
   line-height: 60px;
 }
 
@@ -136,7 +135,7 @@ nav h4 {
   font-weight: 500;
 }
 
-.background-links{
+.background-links {
   display: flex;
   flex-direction: column;
   gap: .5rem;
@@ -302,7 +301,8 @@ nav h4 {
   transition: transform 0.2s ease;
 }
 
-.social-links svg:hover, .cv-link:hover {
+.social-links svg:hover,
+.cv-link:hover {
   transform: scale(1.1);
 }
 
@@ -401,43 +401,56 @@ footer {
   }
 
   .nav-links {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
     flex-direction: column;
-    width: 100%;
     background-color: #222;
+    padding-top: 60px;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .nav-links.show {
-    display: flex;
+    right: 0;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links li {
+    width: 100%;
+    height: auto;
   }
 
   .nav-links li a {
+    width: 100%;
     line-height: 1.5;
     padding: 1rem;
     border-top: 1px solid #333;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .overlay.show {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
 @media screen and (max-width: 500px) {
 
-  /*
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-
-  nav li {
-    width: 100%;
-  }
-
-  nav li a {
-    display: block;
-    padding: 1rem;
-    font-size: 1.2rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-  */
   .intro {
     font-size: 1rem;
     padding: 1rem;
