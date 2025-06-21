@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "project_cwad.jpg",
       text: `<p>Création d'un site web en <strong>HTML</strong> et <strong>CSS</strong> pour une activité de
         divertissement dans le cadre d'un projet universitaire.</p>`,
-      link: "https://github.com/baky91/projet-cwad",
+      link: "https://github.com/baky91/cwad",
     },
     {
       title: "Création d'une base de données",
