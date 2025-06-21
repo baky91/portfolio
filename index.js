@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       link: "https://github.com/baky91/sncf-app",
     },
     {
-      title: "Projet jeu vidéo [S102]",
+      title: "Jeu vidéo",
       image: "project_s102.jpg",
       text: `<p>Réalisation d'un jeu-vidéo 2D en <strong>C++</strong> avec la bibliothèque
             <strong>SDL2</strong>, dans le cadre d'un projet universitaire.
@@ -28,18 +28,24 @@ document.addEventListener("DOMContentLoaded", function () {
       link: "#",
     },
     {
-      title: "Projet CWAD",
+      title: "CWAD",
       image: "project_cwad.jpg",
       text: `<p>Création d'un site web en <strong>HTML</strong> et <strong>CSS</strong> pour une activité de
         divertissement dans le cadre d'un projet universitaire.</p>`,
       link: "https://github.com/baky91/projet-cwad",
     },
     {
-      title: "Projet BD (S104)",
+      title: "Création d'une base de données",
       image: "project_s104.jpg",
       text: `<p>Création d'une base de données complète sur une entreprise d'électricité.</p>
         <p>Réalisation du <strong>modèle conceptuel de données (MCD)</strong>, du <strong>schéma relationnel (SR)</strong> et de requêtes <strong>SQL</strong> pour gérer les clients, chantiers et interventions.</p>`,
       link: "#",
+    },
+    {
+      title: "Jeux de quiz des drapeaux",
+      image: "project_flag_quiz.jpg",
+      text: `<p>Jeu de quiz sur les drapeaux du monde entier. Réalisé en <strong>HTML</strong></p>, <strong>CSS</strong> et <strong>Javascript</strong>`,
+      link: "https://github.com/baky91/quiz_drapeaux",
     },
   ];
 
