@@ -1,4 +1,4 @@
-import SectionTitle from './layout/SectionTitle'
+import SectionTitle from '../layout/SectionTitle'
 
 export default function About() {
   return (

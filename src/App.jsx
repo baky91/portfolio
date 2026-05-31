@@ -1,13 +1,13 @@
-import Projects from './components/Projects'
-import Navbar from './components/Navbar'
+import Projects from './components/sections/Projects'
+import Navbar from './components/sections/Navbar'
 import { ThemeProvider } from 'next-themes'
 import { useEffect, useState } from 'react'
-import Home from './components/Home'
-import About from './components/About'
-import Experience from './components/Experience'
-import Skills from './components/Skills'
-import Education from './components/Education'
-import Contact from './components/Contact'
+import Home from './components/sections/Home'
+import About from './components/sections/About'
+import Experience from './components/sections/Experience'
+import Skills from './components/sections/Skills'
+import Education from './components/sections/Education'
+import Contact from './components/sections/Contact'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')

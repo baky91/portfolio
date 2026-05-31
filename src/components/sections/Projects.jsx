@@ -1,4 +1,4 @@
-import SectionTitle from './layout/SectionTitle'
+import SectionTitle from '../layout/SectionTitle'
 import { ExternalLink, CodeXml } from 'lucide-react'
 
 const PROJECTS_DATA = [
