@@ -39,9 +39,10 @@ export default function Navbar({ activeSection }) {
     <nav className='fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-16'>
-          <span className='font-semibold text-3xl text-[#2563EB]'>
+          <a href='#' className='font-semibold text-3xl text-[#2563EB]'>
             Bakary B.
-          </span>
+          </a>
+
           <div className='flex items-center space-x-8'>
             <div className='hidden md:flex space-x-6'>
               {SECTIONS.map((section) => (
@@ -67,15 +68,15 @@ export default function Navbar({ activeSection }) {
               aria-label='Toggle theme'
             >
               {theme === 'dark' ? (
-                <Sun className='w-5 h-5' />
+                <Sun className='w-5 h-5 cursor-pointer' />
               ) : (
-                <Moon className='w-5 h-5' />
+                <Moon className='w-5 h-5 cursor-pointer' />
               )}
             </button>
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className='md:hidden p-2 rounded-lg hover:bg-accent transition-colors'
+              className='md:hidden p-2 rounded-lg hover:bg-accent transition-colors cursor-pointer'
               aria-label='Toggle menu'
             >
               {isMenuOpen ? (
