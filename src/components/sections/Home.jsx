@@ -8,9 +8,16 @@ export default function Home() {
         <h1 className='text-5xl sm:text-6xl lg:text-7xl font-bold mb-4'>
           <span className='text-foreground'>Bakary Bomou</span>
         </h1>
+
         <h2 className='text-2xl sm:text-3xl lg:text-4xl text-[#2563EB] mb-6'>
-          Étudiant en Informatique
+          Apprenti Développeur d'Interface et Automatisation
         </h2>
+
+        <p className='text-lg text-muted-foreground max-w-2xl mx-auto mb-8'>
+          Étudiant en deuxième année de BUT Informatique à l'
+          <strong>IUT d'Orsay</strong>. En contrat d'apprentissage chez{' '}
+          <strong>Stellantis</strong>.
+        </p>
       </div>
     </section>
   )
