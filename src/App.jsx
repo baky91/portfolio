@@ -1,8 +1,8 @@
 import Project from './components/Project'
-import projectsData from './data/projects.json'
+import { PROJECTS_DATA } from './data/projects'
 
 function App() {
-  console.log(projectsData)
+  console.log(PROJECTS_DATA)
 
   return (
     <>
@@ -13,7 +13,7 @@ function App() {
       <section className="projects">
         <h2>Mes projets</h2>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
-          {projectsData.map((data, idx) => {
+          {PROJECTS_DATA.map((data, idx) => {
             return <Project key={'proj-' + idx} data={data} />
           })}
         </div>
