@@ -1,3 +1,5 @@
+import SectionTitle from './layout/SectionTitle'
+
 const PROJECTS_DATA = [
   {
     title: 'Application SNCF',
@@ -47,26 +49,24 @@ const PROJECTS_DATA = [
 
 export default function Projects() {
   return (
-    <section className="projects">
-      <h2>Mes projets</h2>
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
+    <section id='projects'>
+      <SectionTitle title='Projets' />
+
+      <div className='grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8'>
         {PROJECTS_DATA.map((data, idx) => {
           return (
-            <div
-              key={'proj-' + idx}
-              className="bg-[#1a1a1a] text-white flex flex-col justify-between"
-            >
-              <div className="project-image">
-                <img src={data.image} alt="" />
+            <div key={'proj-' + idx} className='flex flex-col justify-between'>
+              <div className='project-image'>
+                <img src={data.image} alt='' />
               </div>
               <h3>{data.title}</h3>
-              <div className="project-content">
-                {data.texts.map((text) => {
-                  return <p key={text}>{text}</p>
+              <div className='project-content'>
+                {data.texts.map((text, idx) => {
+                  return <p key={'text-' + idx}>{text}</p>
                 })}
               </div>
-              <div className="project-links">
-                <a href={data.link} target="_blank">
+              <div className='project-links'>
+                <a href={data.link} target='_blank'>
                   Code source
                 </a>
               </div>

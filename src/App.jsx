@@ -2,6 +2,12 @@ import Projects from './components/Projects'
 import Navbar from './components/Navbar'
 import { ThemeProvider } from 'next-themes'
 import { useEffect, useState } from 'react'
+import Home from './components/Home'
+import About from './components/About'
+import Experience from './components/Experience'
+import Skills from './components/Skills'
+import Education from './components/Education'
+import Contact from './components/Contact'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
@@ -41,14 +47,17 @@ function App() {
   }, [])
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-      <div className="min-h-screen bg-background text-foreground">
+    <ThemeProvider attribute='class' defaultTheme='light' enableSystem={false}>
+      <div className='min-h-screen bg-background text-foreground'>
         <Navbar activeSection={activeSection} />
-        <h1 className="text-3xl text-sky-600 font-bold underline">
-          Bakary Bomou - Portfolio
-        </h1>
         <main>
+          <Home />
+          <About />
+          <Experience />
           <Projects />
+          <Skills />
+          <Education />
+          <Contact />
         </main>
       </div>
     </ThemeProvider>
