@@ -1,23 +1,14 @@
-import Project from './components/Project'
-import { PROJECTS_DATA } from './data/projects'
+import Projects from './components/Projects'
 
 function App() {
-  console.log(PROJECTS_DATA)
-
   return (
     <>
       <h1 className="text-3xl text-sky-600 font-bold underline">
         Bakary Bomou - Portfolio
       </h1>
-
-      <section className="projects">
-        <h2>Mes projets</h2>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
-          {PROJECTS_DATA.map((data, idx) => {
-            return <Project key={'proj-' + idx} data={data} />
-          })}
-        </div>
-      </section>
+      <main>
+        <Projects />
+      </main>
     </>
   )
 }
