@@ -1,5 +1,5 @@
 import Projects from './components/sections/Projects'
-import Navbar from './components/sections/Navbar'
+import Navbar from './components/layout/Navbar'
 import { ThemeProvider } from 'next-themes'
 import { useEffect, useState } from 'react'
 import Home from './components/sections/Home'
