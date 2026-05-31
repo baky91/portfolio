@@ -14,6 +14,18 @@ const PROJECTS_DATA = [
     codeUrl: 'https://github.com/baky91/sncf-app',
   },
   {
+    title: "L'épervier masqué",
+    image: './img/projects/project_epervier.png',
+    texts: [
+      "Jeu multijoueur web inspirée du célèbre jeu d'enfance de l'épervier.",
+      "Les survivants doivent traverser l'arène en évitant de se faire toucher par les éperviers.",
+      'Le jeu est visible sur un écran central et les joueurs se connectent et intéragissent via leur appareil grâce à un serveur relais.',
+    ],
+    technologies: ['NodeJS', 'Godot', 'JavaScript', 'WebSockets'],
+    demoUrl: '#',
+    codeUrl: '#',
+  },
+  {
     title: 'Gestion CIUP',
     image: './img/projects/projet_transverse.jpg',
     texts: [
