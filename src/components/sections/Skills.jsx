@@ -19,7 +19,7 @@ const skillCategories = [
   },
   {
     category: 'Réseaux',
-    skills: ['TCP/IP'],
+    skills: ['TCP/IP', 'DHCP'],
   },
   {
     category: 'Outils',
