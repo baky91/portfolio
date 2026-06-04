@@ -1,6 +1,35 @@
 import SectionTitle from '../layout/SectionTitle'
 
+const skillCategories = [
+  {
+    category: 'Langages',
+    skills: ['Java', 'Python', 'C++', 'C#', 'PHP', 'JavaScript'],
+  },
+  {
+    category: 'Front-end',
+    skills: ['HTML/CSS', 'React'],
+  },
+  {
+    category: 'Back-end',
+    skills: ['Node.js', 'Express.js', 'FastAPI', 'API REST'],
+  },
+  {
+    category: 'Bases de données',
+    skills: ['Oracle SQL', 'MySQL', 'SQLite'],
+  },
+  {
+    category: 'Réseaux',
+    skills: ['TCP/IP'],
+  },
+  {
+    category: 'Outils',
+    skills: ['Git', 'GitHub', 'Docker', 'Linux'],
+  },
+]
+
 export default function Skills() {
+  console.log(skillCategories)
+
   return (
     <section
       id='skills'
