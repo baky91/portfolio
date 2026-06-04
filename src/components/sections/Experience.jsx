@@ -1,4 +1,5 @@
 import SectionTitle from '../layout/SectionTitle'
+import { Briefcase } from 'lucide-react'
 
 const experiences = [
   {
@@ -9,7 +10,7 @@ const experiences = [
     description: [
       'Modernisation de pipelines de modélisation 3D',
       "• Développement d'un plugin de standardisation de modèles 3D sur Autodesk VRED",
-      "• Écriture de scripts d'automatisation de génération de rendus photos et vidéos",
+      "• Écriture de scripts d'automatisation de génération de rendus photos et vidéos à partir de modèles 3D",
       "• Création d'interfaces utilisateurs",
       "• Conception et développement d'une architecture Web (API REST, Base de données, Interface Web)",
     ],
@@ -17,23 +18,54 @@ const experiences = [
 ]
 
 export default function Experience() {
-  console.log(experiences)
   return (
     <section
       id='experience'
       className='flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 bg-muted/30'
     >
-      <SectionTitle title='Expérience' />
-      {experiences.map((exp) => (
-        <div key={exp.title}>
-          <h3>{exp.title}</h3>
-          <p>{exp.company}</p>
-          <p>{exp.period}</p>
-          {exp.description.map((line, idx) => (
-            <p key={'line-' + idx}>{line}</p>
+      <div className='max-w-4xl mx-auto w-full'>
+        <SectionTitle title='Expérience' />
+        <div className='relative'>
+          <div className='absolute left-8 top-0 bottom-0 w-0.5 bg-border'></div>
+          {experiences.map((exp, idx) => (
+            <>
+              <div
+                key={'exp-' + idx}
+                className='relative pl-20 pb-12 last:pb-0'
+              >
+                <div className='absolute left-5 top-0 w-6 h-6 bg-[#2563EB] rounded-full border-4 border-background'></div>
+
+                <div className='bg-card border border-border rounded-lg p-6 hover:border-[#2563EB] transition-all hover:shadow-lg'>
+                  <div className='flex items-start justify-between mb-4'>
+                    <div>
+                      <h3 className='text-xl font-semibold mb-1'>
+                        {exp.title}
+                      </h3>
+                      <div className='flex items-center gap-2 text-muted-foreground'>
+                        <Briefcase className='w-4 h-4' />
+                        <span>{exp.company}</span>
+                      </div>
+                    </div>
+                    <span className='text-sm text-[#2563EB] bg-[#2563EB]/10 px-3 py-1 rounded-full'>
+                      {exp.period}
+                    </span>
+                  </div>
+                  <ul className='space-y-2'>
+                    {exp.description.map((item, i) => (
+                      <li
+                        key={'desc-' + i}
+                        className='text-muted-foreground flex items-start'
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </>
           ))}
         </div>
-      ))}
+      </div>
     </section>
   )
 }
