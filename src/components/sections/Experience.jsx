@@ -14,6 +14,14 @@ const experiences = [
       "• Création d'interfaces utilisateurs",
       "• Conception et développement d'une architecture Web (API REST, Base de données, Interface Web)",
     ],
+    technologies: [
+      'Python',
+      'Autodesk VRED',
+      'Blender',
+      'AWS Deadline',
+      'Figma',
+      'React',
+    ],
   },
 ]
 
@@ -38,18 +46,26 @@ export default function Experience() {
                 <div className='bg-card border border-border rounded-lg p-6 hover:border-[#2563EB] transition-all hover:shadow-lg'>
                   <div className='flex items-start justify-between mb-4'>
                     <div>
+                      {/* EXPERIENCE TITLE */}
                       <h3 className='text-xl font-semibold mb-1'>
                         {exp.title}
                       </h3>
+
+                      {/* COMPANY NAME */}
                       <div className='flex items-center gap-2 text-muted-foreground'>
                         <Briefcase className='w-4 h-4' />
                         <span>{exp.company}</span>
                       </div>
                     </div>
+
+                    {/* EXPERIENCE PERIOD */}
                     <span className='text-sm text-[#2563EB] bg-[#2563EB]/10 px-3 py-1 rounded-full'>
                       {exp.period}
                     </span>
                   </div>
+
+                  {/* EXPERIENCE DESCRIPTION */}
+                  <h3>Missions : </h3>
                   <ul className='space-y-2'>
                     {exp.description.map((item, i) => (
                       <li
@@ -60,6 +76,19 @@ export default function Experience() {
                       </li>
                     ))}
                   </ul>
+
+                  {/* EXPERIENCE TECHNOLOGIES */}
+                  <h3 className='mt-1.5'>Technologies : </h3>
+                  <div className='flex flex-wrap gap-2 mt-3 mb-6'>
+                    {exp.technologies.map((tech, idx) => (
+                      <div
+                        key={'tech-' + idx}
+                        className='px-3 py-1 bg-[#2563EB]/10 text-[#2563EB] rounded-full text-sm'
+                      >
+                        {tech}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </>
