@@ -32,7 +32,7 @@ export default function Experience() {
       className='flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 bg-muted/30'
     >
       <div className='max-w-4xl mx-auto w-full'>
-        <SectionTitle title='Expérience' />
+        <SectionTitle title='Expériences' />
         <div className='relative'>
           <div className='absolute left-8 top-0 bottom-0 w-0.5 bg-border'></div>
           {experiences.map((exp, idx) => (
