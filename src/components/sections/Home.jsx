@@ -1,3 +1,5 @@
+import { MoveDown } from 'lucide-react'
+
 export default function Home() {
   return (
     <section
@@ -22,6 +24,20 @@ export default function Home() {
           Admis à l'<strong>ENSIIE</strong> pour la formation sous statut
           d'apprenti pour la rentrée 2026.
         </p>
+
+        <div className='flex flex-wrap gap-4 justify-center'>
+          <button
+            className='px-6 py-3 bg-[#2563EB] text-white rounded-lg hover:bg-[#1d4ed8] transition-colors flex items-center gap-2 cursor-pointer'
+            onClick={() => {
+              document.getElementById('projects')?.scrollIntoView({
+                behavior: 'smooth',
+              })
+            }}
+          >
+            Voir mes projets
+            <MoveDown />
+          </button>
+        </div>
       </div>
     </section>
   )
