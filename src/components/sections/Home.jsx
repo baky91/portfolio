@@ -18,6 +18,10 @@ export default function Home() {
           <strong>IUT d'Orsay</strong>. En contrat d'apprentissage chez{' '}
           <strong>Stellantis</strong>.
         </p>
+        <p className='text-lg text-muted-foreground max-w-2xl mx-auto mb-8'>
+          Admis à l'<strong>ENSIIE</strong> pour la formation sous statut
+          d'apprenti pour la rentrée 2026.
+        </p>
       </div>
     </section>
   )
