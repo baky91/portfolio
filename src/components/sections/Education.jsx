@@ -18,7 +18,7 @@ const formations = [
     type: 'degree',
   },
   {
-    degree: 'Baccalauréat général (Mathématiques, Physiques-Chimie',
+    degree: 'Baccalauréat général (Mathématiques, Physiques-Chimie)',
     institution: 'Lycée Jacques Prévert, Longjumeau',
     period: '2024',
     incoming: false,
