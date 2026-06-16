@@ -1,5 +1,6 @@
 import SectionTitle from '../layout/SectionTitle'
 import { ExternalLink, CodeXml } from 'lucide-react'
+import TechnologyItem from '../layout/TechnologyItem'
 
 const PROJECTS_DATA = [
   {
@@ -85,12 +86,7 @@ export default function Projects() {
                   {/* PROJECT TECHNOLOGIES */}
                   <div className='flex flex-wrap gap-2 mt-3 mb-6'>
                     {project.technologies.map((tech, idx) => (
-                      <div
-                        key={'tech-' + idx}
-                        className='px-3 py-1 bg-[#2563EB]/10 text-[#2563EB] rounded-full text-sm'
-                      >
-                        {tech}
-                      </div>
+                      <TechnologyItem key={'tech-' + idx} text={tech} />
                     ))}
                   </div>
 

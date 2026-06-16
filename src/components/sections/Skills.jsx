@@ -1,4 +1,5 @@
 import SectionTitle from '../layout/SectionTitle'
+import TechnologyItem from '../layout/TechnologyItem'
 
 const skillCategories = [
   {
@@ -52,12 +53,7 @@ export default function Skills() {
               {/* SKILLS LIST */}
               <div className='flex flex-wrap gap-2'>
                 {category.skills.map((skill, idx) => (
-                  <span
-                    key={'skill-' + idx}
-                    className='px-3 py-1.5 bg-[#2563EB]/10 text-[#2563EB] rounded-lg text-sm hover:bg-[#2563EB]/20 transition-colors cursor-default'
-                  >
-                    {skill}
-                  </span>
+                  <TechnologyItem key={'skill-' + idx} text={skill} />
                 ))}
               </div>
             </div>
