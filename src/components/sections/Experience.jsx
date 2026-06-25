@@ -60,7 +60,7 @@ export default function Experience() {
                     </div>
 
                     {/* EXPERIENCE PERIOD */}
-                    <span className='text-sm text-[#2563EB] bg-[#2563EB]/10 px-3 py-1 rounded-full'>
+                    <span className='text-center text-sm text-[#2563EB] bg-[#2563EB]/10 px-3 py-1 rounded-full'>
                       {exp.period}
                     </span>
                   </div>
